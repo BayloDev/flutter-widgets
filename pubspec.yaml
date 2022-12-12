@@ -1,0 +1,41 @@
+name: flutter_widgets_project
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.5 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: 
+  flutter_styled_toast: 
+  widget_with_codeview: 
+  carousel_slider: 
+  another_flushbar: 
+  marquee: 
+  image_picker: 
+  flutter_colorpicker: 
+  percent_indicator: 
+  flutter_native_splash:
+  easy_splash_screen:
+  smooth_page_indicator: 
+  shared_preferences: 
+  adaptive_theme: 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - images/photo.jpg
+    - images/flutter_logo.jpg
+    - lib/
