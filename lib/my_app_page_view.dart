@@ -46,6 +46,7 @@ class _MyAppPageViewState extends State<MyAppPageView> {
   @override
   void dispose() {
     timer?.cancel();
+    controller.dispose();
     super.dispose();
   }
 
@@ -147,7 +148,9 @@ class _MyAppPageViewState extends State<MyAppPageView> {
                   return Container(
                     margin: const EdgeInsets.symmetric(horizontal: 30),
                     child: ElevatedButton(
-                      onPressed: () async {
+                      onPressed:currentIndex <= 2
+                          ?  () async {
+                             currentIndex = 3;
                         Navigator.pushReplacement(
                           ctx,
                           MaterialPageRoute(
@@ -159,7 +162,7 @@ class _MyAppPageViewState extends State<MyAppPageView> {
                             await SharedPreferences.getInstance();
 
                         sharedPreferences.setBool('isOnBoardingLooked', true);
-                      },
+                      }:(){},
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(Colors.deepOrange),
